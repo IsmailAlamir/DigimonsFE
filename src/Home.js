@@ -13,7 +13,7 @@ export default function Home() {
 
   async function addToFav(result) {
     try {
-      const response = await axios.post("http://127.0.0.1:8000/api/v1/digimons/", {
+      const response = await axios.post("https://digimons-be-git-db-ismailalamir.vercel.app/api/v1/digimons/", {
         "name":result.name
         ,
         "img":result.img
