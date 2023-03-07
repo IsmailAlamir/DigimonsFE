@@ -3,4 +3,4 @@
 Author: Ismail Alamir
 
 
-[netlify](https://main--fancy-zuccutto-a28573.netlify.app/)
+[LINK](https://digimons-fe-seven.vercel.app/)
