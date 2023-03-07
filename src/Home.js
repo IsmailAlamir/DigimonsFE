@@ -4,6 +4,7 @@ import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import axios from 'axios';
+import Swal from 'sweetalert2'
 
 export default function Home() {
 
@@ -21,12 +22,20 @@ export default function Home() {
 
       });
       console.log(response.data);
+      Swal.fire({
+        position: 'top-center',
+        icon: 'success',
+        title: 'Done',
+        showConfirmButton: false,
+        timer: 1500
+      })
     } catch (error) {
       console.error(error);
     }
   }
 
 
+  
 
   useEffect(() => {
     async function fetchData() {
