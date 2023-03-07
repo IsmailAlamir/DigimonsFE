@@ -20,7 +20,7 @@ export default function MyDigimons() {
 
     useEffect(() => {
         async function fetchData() {
-            const response = await axios.get("http://127.0.0.1:8000/api/v1/digimons/");
+            const response = await axios.get("https://digimons-be-git-db-ismailalamir.vercel.app/api/v1/digimons/");
             const jsonData = response.data;
             setData(jsonData);
         }
@@ -44,14 +44,14 @@ export default function MyDigimons() {
         setFlag(false);
 
         try {
-            const response = await axios.put(`http://127.0.0.1:8000/api/v1/digimons/${cardID}`, {
+            const response = await axios.put(`https://digimons-be-git-db-ismailalamir.vercel.app/api/v1/digimons/${cardID}`, {
                 "name": cardName,
                 "img": cardImage,
                 "level": cardLevel
             });
 
             console.log(response.data);
-            const responseUpdate = await axios.get("http://127.0.0.1:8000/api/v1/digimons/");
+            const responseUpdate = await axios.get("https://digimons-be-git-db-ismailalamir.vercel.app/api/v1/digimons/");
             const jsonDataUpdate = responseUpdate.data;
             setData(jsonDataUpdate);
 
@@ -63,7 +63,7 @@ export default function MyDigimons() {
 
     const handleDelete = async (card) => {
         try {
-            const res = await axios.delete(`http://127.0.0.1:8000/api/v1/digimons/${card.id}`);
+            const res = await axios.delete(`https://digimons-be-git-db-ismailalamir.vercel.app/api/v1/digimons/${card.id}`);
             console.log(res);
             setData(data.filter((c) => c.id !== card.id));
         } catch (err) {
